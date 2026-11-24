@@ -153,7 +153,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
 .split.in .w > span{transform:none}
 
 /* menu */
-.menu{border-top:1px solid var(--line)}
+.menu{border-top:1px solid var(--line);margin:0;padding:0}
 .menu li{list-style:none}
 .menu ul{margin:0;padding:0}
 .row{position:relative;display:grid;grid-template-columns:70px 1fr auto auto;align-items:baseline;gap:24px;padding:30px 8px;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .6s var(--ease),color .4s}
@@ -169,8 +169,8 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
 .row__price{font:400 clamp(24px,2.4vw,34px)/1 var(--serif);min-width:120px;text-align:right}
 .row__thumb{display:none}
 .menu-wrap{position:relative;isolation:isolate}
-.peek{position:fixed;left:0;top:0;width:280px;aspect-ratio:3/4;border-radius:140px 140px 16px 16px;overflow:hidden;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.6) rotate(-6deg);transition:opacity .4s,transform .6s var(--ease)}
-.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}
+.peek{position:fixed;left:0;top:0;width:260px;aspect-ratio:1;border-radius:50%;box-shadow:0 24px 60px rgba(42,26,31,.25);overflow:hidden;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.6) rotate(-6deg);transition:opacity .4s,transform .6s var(--ease)}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}
 .peek img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
 .peek img.on{opacity:1}
 .menu-note{margin-top:28px;font-size:14px;color:var(--muted)}
@@ -179,7 +179,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
   .row__n{display:none}
   .row__meta{grid-column:2;grid-row:2;font-size:11px}
   .row__price{grid-row:1/3;grid-column:3;min-width:0;align-self:center}
-  .row__thumb{display:block;grid-row:1/3;width:64px;height:80px;border-radius:32px 32px 8px 8px;overflow:hidden;align-self:center}
+  .row__thumb{display:block;grid-row:1/3;width:64px;height:64px;border-radius:50%;overflow:hidden;align-self:center}
   .row__thumb img{width:100%;height:100%;object-fit:cover}
   .row:hover{padding-left:0;padding-right:0;color:inherit}.row::before{display:none}
   .peek{display:none}
@@ -213,6 +213,16 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
 .bridal__list li{counter-increment:b;display:flex;gap:22px;padding:18px 0;border-bottom:1px solid var(--line);font-size:18px}
 .bridal__list li::before{content:"0" counter(b);font:italic 400 22px/1.2 var(--serif);color:var(--rose)}
 @media(max-width:900px){.bridal__grid{grid-template-columns:1fr}.bridal__img{width:min(86%,420px);margin:0 auto}.bridal__price{right:-16px;width:130px;height:130px}.bridal__price b{font-size:30px}}
+
+.ribbon{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:center;margin-top:clamp(64px,8vw,120px)}
+.ribbon figure{margin:0;overflow:hidden}
+.ribbon img{width:100%;height:115%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.ribbon figure:hover img{transform:scale(1.05)}
+.rb1{grid-column:1/6;aspect-ratio:5/4;border-radius:999px}
+.rb2{grid-column:6/9;aspect-ratio:1;border-radius:50%}
+.rb3{grid-column:9/11;aspect-ratio:3/5;border-radius:999px 999px 0 0}
+.ribbon__txt{grid-column:11/13;font:italic 400 24px/1.25 var(--serif);color:var(--rose-d);margin:0}
+@media(max-width:760px){.ribbon{gap:12px}.rb1{grid-column:1/13}.rb2{grid-column:1/7}.rb3{grid-column:7/11}.ribbon__txt{grid-column:1/13;font-size:22px}}
 
 /* gallery */
 .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start}
@@ -277,6 +287,8 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
 .foot__word span:hover{color:var(--blush);transform:translateY(-6%)}
 .foot__legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;opacity:.6;border-top:1px solid rgba(247,241,234,.15);padding-top:24px}
 @media(max-width:760px){.foot__top{grid-template-columns:1fr}}
+
+.credits summary{cursor:pointer}.credits ul{margin:12px 0 0;padding-left:18px;max-width:760px;line-height:1.6}
 
 /* phone bar */
 .mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:45;display:none;transform:translateY(140%);transition:transform .6s var(--ease)}
@@ -353,13 +365,13 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
           <li><a class="row" href="#book" data-img="0"><span class="row__thumb"><img src="img/facial-700.jpg" alt="" loading="lazy"></span><span class="row__n">01</span><span class="row__name">Signature <em>facial</em></span><span class="row__meta">60 min</span><span class="row__price">Rs 1,500</span></a></li>
           <li><a class="row" href="#book" data-img="1"><span class="row__thumb"><img src="img/pink-nails-700.jpg" alt="" loading="lazy"></span><span class="row__n">02</span><span class="row__name">Gel <em>nails</em></span><span class="row__meta">45 min</span><span class="row__price">Rs 1,200</span></a></li>
           <li><a class="row" href="#book" data-img="2"><span class="row__thumb"><img src="img/hair-wash-700.jpg" alt="" loading="lazy"></span><span class="row__n">03</span><span class="row__name">Hair <em>spa</em></span><span class="row__meta">75 min</span><span class="row__price">Rs 2,000</span></a></li>
-          <li><a class="row" href="#book" data-img="3"><span class="row__thumb"><img src="img/makeup-application-700.jpg" alt="" loading="lazy"></span><span class="row__n">04</span><span class="row__name">Party <em>makeup</em></span><span class="row__meta">90 min</span><span class="row__price">Rs 3,500</span></a></li>
+          <li><a class="row" href="#book" data-img="3"><span class="row__thumb"><img src="img/makeup-rollers-700.jpg" alt="" loading="lazy"></span><span class="row__n">04</span><span class="row__name">Party <em>makeup</em></span><span class="row__meta">90 min</span><span class="row__price">Rs 3,500</span></a></li>
           <li><a class="row" href="#book" data-img="4"><span class="row__thumb"><img src="img/nails-700.jpg" alt="" loading="lazy"></span><span class="row__n">05</span><span class="row__name">Mani <em>&amp; pedi</em></span><span class="row__meta">80 min</span><span class="row__price">Rs 1,800</span></a></li>
-          <li><a class="row" href="#bridal" data-img="3"><span class="row__thumb"><img src="img/makeup-application-700.jpg" alt="" loading="lazy"></span><span class="row__n">06</span><span class="row__name">Bridal <em>package</em></span><span class="row__meta">Full morning</span><span class="row__price">Rs 12,000</span></a></li>
+          <li><a class="row" href="#bridal" data-img="5"><span class="row__thumb"><img src="img/bride-700.jpg" alt="" loading="lazy"></span><span class="row__n">06</span><span class="row__name">Bridal <em>package</em></span><span class="row__meta">Full morning</span><span class="row__price">Rs 12,000</span></a></li>
         </ul>
         <p class="menu-note">Threading and waxing on the wall menu at the studio. Walk-ins welcome when a chair is free.</p>
         <div class="peek" id="peek" aria-hidden="true">
-          <img src="img/facial-700.jpg" alt=""><img src="img/pink-nails-700.jpg" alt=""><img src="img/hair-wash-700.jpg" alt=""><img src="img/makeup-application-700.jpg" alt=""><img src="img/nails-700.jpg" alt=""><img src="img/hair-styling-700.jpg" alt="">
+          <img src="img/facial-700.jpg" alt=""><img src="img/pink-nails-700.jpg" alt=""><img src="img/hair-wash-700.jpg" alt=""><img src="img/makeup-rollers-700.jpg" alt=""><img src="img/nails-700.jpg" alt=""><img src="img/bride-700.jpg" alt="">
         </div>
       </div>
     </div>
@@ -372,9 +384,9 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
       <p class="eyebrow rv" id="st-h">The Apsara way</p>
       <p class="statement__txt" id="st">One chair, one client, and <em>no clock</em> on the wall. Your facial takes the full hour, and nobody waits behind you.</p>
       <div class="statement__pics">
-        <figure class="rv-img"><img src="img/nails-700.jpg" alt="Glossy black and tortoiseshell nails" loading="lazy" data-par=".06"></figure>
-        <figure class="rv-img"><img src="img/hair-wash-700.jpg" alt="A stylist washing a laughing client's hair" loading="lazy" data-par=".1" style="object-position:50% 60%"></figure>
-        <figure class="rv-img"><img src="img/makeup-application-700.jpg" alt="An artist lining a client's lips" loading="lazy" data-par=".05" style="object-position:65% 40%"></figure>
+        <figure class="rv-img"><img src="img/mehndi-bangles-700.jpg" alt="Hands with fresh mehndi and green bangles" loading="lazy" data-par=".06"></figure>
+        <figure class="rv-img"><img src="img/makeup-artist-1200.jpg" alt="A makeup artist working on a client's brows" loading="lazy" data-par=".1" style="object-position:55% 40%"></figure>
+        <figure class="rv-img"><img src="img/henna-700.jpg" alt="A hand with a fine henna pattern" loading="lazy" data-par=".05"></figure>
       </div>
     </div>
   </section>
@@ -382,7 +394,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
   <section class="sec bridal" id="bridal" aria-labelledby="bridal-h">
     <div class="wrap bridal__grid">
       <div class="bridal__img">
-        <div class="arch rv-img"><img src="img/makeup-application-1200.jpg" alt="Bridal makeup being applied" loading="lazy" data-par=".08" style="object-position:68% 40%"></div>
+        <div class="arch rv-img"><img src="img/bride-1200.jpg" alt="A Nepali bride in red with a tika and gold jewellery" loading="lazy" data-par=".08" style="object-position:58% 35%"></div>
         <div class="bridal__price rv"><b>Rs 12,000</b><span>The whole morning</span></div>
       </div>
       <div>
@@ -395,6 +407,12 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
         </ul>
         <a class="btn magnetic rv" href="#book"><span>Book your date</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
+    </div>
+    <div class="wrap ribbon">
+      <figure class="rb1 rv-img"><img src="img/wedding-1200.jpg" alt="A Nepali bride and groom in garlands at their wedding" loading="lazy" data-par=".06" style="object-position:50% 30%"></figure>
+      <figure class="rb2 rv-img"><img src="img/mehndi-hands-700.jpg" alt="Two hands covered in bridal mehndi" loading="lazy"></figure>
+      <figure class="rb3 rv-img"><img src="img/makeup-application-700.jpg" alt="An artist lining a client's lips" loading="lazy" style="object-position:65% 40%"></figure>
+      <p class="ribbon__txt rv">From the first coat of foundation to the last pin in your hair.</p>
     </div>
   </section>
 
@@ -461,7 +479,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
       <div><h3>Explore</h3><p style="margin:0"><a href="#services">Services</a> · <a href="#bridal">Bridal</a> · <a href="#studio">Studio</a> · <a href="#book">Book</a></p></div>
     </div>
     <p class="foot__word" aria-hidden="true"><span>A</span><span>p</span><span>s</span><span>a</span><span>r</span><span>a</span></p>
-    <div class="foot__legal"><span>© 2026 Apsara Glow Studio</span><span>Photographs via Unsplash</span></div>
+    <div class="foot__legal"><span>© 2026 Apsara Glow Studio</span><details class="credits"><summary>Photographs via Unsplash and Wikimedia Commons</summary><ul><li><a href="https://commons.wikimedia.org/wiki/File:Nepali_Bride_Tanuja.jpg">Nepali Bride Tanuja</a> by Prabina Karki, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Bride_Groom_NP.JPG">Bride Groom NP</a> by Krish Dulal, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Mehndi_tatoo_for_wedding_in_India.jpg">Mehndi tatoo for wedding in India</a> by DADEVAL, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Mehndi_02.JPG">Mehndi 02</a> by AKS.9955, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Mehndi_decoration_on_back_side_of_hands.jpg">Mehndi decoration on back side of hands</a> by Msansari4011, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Makeup_artist.jpg">Makeup artist</a> by Fidelis ogunseri ocsfilms, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Iranian_female_makeup_Artist_Zeynab_Rashti-_canon_Photo-Mostafa_Meraji_(Iran_Mashhad)_01.jpg">Iranian female makeup Artist Zeynab Rashti- canon Photo-Mostafa Meraji (Iran Mashhad) 01</a> by Mostafameraji, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a> (cropped)</li><li>Facial, nails, hair and studio photographs from Unsplash, under the Unsplash licence.</li></ul></details></div>
   </div>
 </footer>
 
