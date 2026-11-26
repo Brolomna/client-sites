@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apsara Glow Studio · Beauty parlour in New Baneshwor, Kathmandu</title>
+<meta name="description" content="Facials, nails, hair and bridal makeup in New Baneshwor, Kathmandu. One client at a time, every price on the wall.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Apsara Glow Studio · Beauty parlour in New Baneshwor">
+<meta property="og:description" content="Facials, nails, hair and bridal makeup. One client at a time, every price on the wall.">
+<meta property="og:image" content="../share-rose.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f7f1ea">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#f7f1ea; --cream:#efe4d8; --blush:#ecc8c0; --rose:#a23b53; --rose-d:#7f2a3f;
+  --plum:#2a1a1f; --ink:#2a1a1f; --muted:#7a6467; --gold:#b8925a; --line:rgba(42,26,31,.14);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1); --gut:clamp(20px,5vw,72px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+em{font-style:italic;color:var(--rose)}
+.wrap{width:min(100% - 2*var(--gut),1320px);margin-inline:auto}
+.eyebrow{font:500 12px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:36px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:.95;letter-spacing:-.02em;margin:0}
+h2{font-size:clamp(48px,7.4vw,112px)}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:99;background:var(--ink);color:var(--ivory);padding:10px 16px}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+
+/* grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* buttons */
+.btn{--bg:var(--rose);position:relative;display:inline-flex;align-items:center;gap:12px;padding:18px 30px;border-radius:999px;background:var(--bg);color:#fff;text-decoration:none;font:500 13px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;overflow:hidden;border:0;cursor:pointer;transition:transform .5s var(--ease)}
+.btn span{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;background:var(--plum);border-radius:inherit;transform:translateY(101%);transition:transform .6s var(--ease)}
+.btn:hover::before{transform:none}
+.btn .arr{width:18px;height:18px;transition:transform .5s var(--ease)}
+.btn:hover .arr{transform:translateX(4px) rotate(-45deg)}
+.btn--ghost{--bg:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.btn--ghost::before{background:var(--ink)}
+.btn--ghost:hover{color:var(--ivory)}
+.link{position:relative;text-decoration:none;font:500 13px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;padding-bottom:6px}
+.link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform-origin:right;transition:transform .6s var(--ease)}
+.link:hover::after{transform:scaleX(0)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .5s,box-shadow .5s,transform .6s var(--ease)}
+.nav.is-solid{background:rgba(247,241,234,.9);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav.is-hidden{transform:translateY(-100%)}
+.nav__in{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{font:400 28px/1 var(--serif);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:baseline;gap:8px}
+.logo i{color:var(--rose)}
+.logo small{font:500 10px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.nav__links{display:flex;gap:36px;align-items:center}
+.nav__links a:not(.btn){text-decoration:none;font:400 14px/1 var(--sans);letter-spacing:.08em;position:relative}
+.nav__links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:1px;background:var(--rose);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.nav__links a:not(.btn):hover::after{transform:none}
+.nav .btn{padding:14px 22px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:1.5px;background:var(--ink);transition:transform .5s var(--ease),top .5s var(--ease)}
+.burger i:first-child{top:17px}.burger i:last-child{top:26px}
+.nav.is-open .burger i:first-child{top:21px;transform:rotate(45deg)}
+.nav.is-open .burger i:last-child{top:21px;transform:rotate(-45deg)}
+@media(max-width:900px){
+  .burger{display:block}
+  .nav__links{position:fixed;inset:84px 0 auto;height:calc(100svh - 84px);flex-direction:column;justify-content:center;gap:28px;background:var(--ivory);clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease)}
+  .nav__links a:not(.btn){font:400 44px/1 var(--serif)}
+  .nav.is-open .nav__links{clip-path:inset(0)}
+  .nav.is-open{background:var(--ivory)}
+}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:130px 0 60px;display:flex;align-items:center}
+.hero__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,80px);align-items:center}
+.hero h1{font-size:clamp(64px,11vw,184px);line-height:.86;margin:28px 0 32px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln > span{display:block}
+.hero h1 .ln:nth-child(2){padding-left:12%}
+.hero__lead{max-width:440px;font-size:18px;color:var(--muted);margin:0 0 36px}
+.hero__row{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+.hero__facts{display:flex;gap:40px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line);max-width:520px}
+.hero__facts b{display:block;font:400 34px/1 var(--serif)}
+.hero__facts span{display:block;margin-top:8px;font-size:12px;line-height:1.5;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.hero__art{position:relative;justify-self:end;width:min(100%,480px)}
+.arch{position:relative;aspect-ratio:3/4.3;border-radius:999px 999px 24px 24px;overflow:hidden;background:var(--blush)}
+.arch img{width:100%;height:120%;object-fit:cover;will-change:transform}
+.hero__oval{position:absolute;left:-22%;bottom:8%;width:46%;aspect-ratio:3/4;border-radius:50%;overflow:hidden;border:8px solid var(--ivory);box-shadow:0 30px 60px rgba(42,26,31,.18)}
+.hero__oval img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:-28px;top:-28px;width:150px;height:150px;animation:spin 22s linear infinite}
+.badge text{font:500 11.5px var(--sans);letter-spacing:.32em;text-transform:uppercase;fill:var(--ink)}
+.badge__c{position:absolute;right:23px;top:23px;width:104px;height:104px;display:grid;place-items:center}
+.badge__c svg{width:26px;height:26px;fill:var(--rose)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero__deco{position:absolute;right:-6%;top:12%;width:44%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--blush),transparent 68%);z-index:-1;filter:blur(10px)}
+@media(max-width:900px){
+  .hero{padding-top:110px}
+  .hero__grid{grid-template-columns:1fr}
+  .hero__art{justify-self:center;width:min(78%,380px);margin-top:20px}
+  .hero__oval{left:-18%}
+  .badge{width:118px;height:118px;right:-18px;top:-18px}.badge__c{right:18px;top:18px;width:82px;height:82px}
+  .hero__facts{gap:20px;margin-top:40px}
+  .hero__facts b{font-size:26px;white-space:nowrap}
+  .hero__facts span{font-size:10px;letter-spacing:.14em}
+  .hero h1 .ln:nth-child(2){padding-left:8%}
+}
+
+/* intro animation */
+.js .hero h1 .ln > span{transform:translateY(110%)}
+.js .hero .fade-in{opacity:0;transform:translateY(20px)}
+.js .arch{clip-path:inset(100% 0 0 0 round 999px 999px 24px 24px)}
+.js .arch img{transform:scale(1.25)}
+.js .hero__oval,.js .badge-wrap{opacity:0;transform:scale(.8)}
+.loaded .hero h1 .ln > span{transform:none;transition:transform 1.3s var(--ease)}
+.loaded .hero h1 .ln:nth-child(2) > span{transition-delay:.12s}
+.loaded .hero .fade-in{opacity:1;transform:none;transition:opacity 1s .5s,transform 1.2s .5s var(--ease)}
+.loaded .arch{clip-path:inset(0 0 0 0 round 999px 999px 24px 24px);transition:clip-path 1.6s .2s var(--ease)}
+.loaded .arch img{transform:scale(1);transition:transform 2.2s .2s var(--ease)}
+.loaded .hero__oval,.loaded .badge-wrap{opacity:1;transform:none;transition:opacity 1s .9s,transform 1.4s .9s var(--ease)}
+
+/* marquee */
+.marquee{padding:34px 0;border-block:1px solid var(--line);overflow:hidden;background:var(--ivory)}
+.marquee__track{display:flex;width:max-content;will-change:transform}
+.marquee__track span{font:italic 400 clamp(40px,5.4vw,78px)/1 var(--serif);padding:0 28px;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.marquee__track span::after{content:"✦";font:normal 22px var(--sans);color:var(--rose)}
+.marquee__track span:nth-child(even){color:transparent;-webkit-text-stroke:1px var(--ink)}
+
+/* sections */
+.sec{padding:clamp(96px,12vw,180px) 0}
+.sec-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:32px;margin-bottom:clamp(48px,6vw,88px)}
+.sec-head p{max-width:340px;color:var(--muted);margin:0}
+@media(max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease),transform 1.2s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv-img img{clip-path:inset(100% 0 0 0);scale:1.2}
+.js .rv-img.in img{clip-path:inset(0);scale:1;transition:clip-path 1.4s var(--ease),scale 1.8s var(--ease)}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split .w > span{display:inline-block;transform:translateY(105%);transition:transform 1.1s var(--ease)}
+.split.in .w > span{transform:none}
+
+/* menu */
+.menu{border-top:1px solid var(--line);margin:0;padding:0}
+.menu li{list-style:none}
+.menu ul{margin:0;padding:0}
+.row{position:relative;display:grid;grid-template-columns:70px 1fr auto auto;align-items:baseline;gap:24px;padding:30px 8px;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .6s var(--ease),color .4s}
+.row::before{content:"";position:absolute;inset:0;background:var(--plum);transform:scaleY(0);transform-origin:bottom;transition:transform .6s var(--ease);z-index:-1}
+.row:hover{color:var(--ivory);padding-left:28px;padding-right:28px}
+.row:hover::before{transform:none;transform-origin:top}
+.row__n{font:400 14px/1 var(--sans);letter-spacing:.2em;color:var(--rose)}
+.row__name{font:400 clamp(30px,3.6vw,54px)/1 var(--serif)}
+.row__name em{transition:color .4s}
+.row:hover .row__name em{color:var(--blush)}
+.row__meta{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:color .4s}
+.row:hover .row__meta{color:rgba(247,241,234,.6)}
+.row__price{font:400 clamp(24px,2.4vw,34px)/1 var(--serif);min-width:120px;text-align:right}
+.row__thumb{display:none}
+.menu-wrap{position:relative;isolation:isolate}
+.peek{position:fixed;left:0;top:0;width:260px;aspect-ratio:1;border-radius:50%;box-shadow:0 24px 60px rgba(42,26,31,.25);overflow:hidden;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.6) rotate(-6deg);transition:opacity .4s,transform .6s var(--ease)}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}
+.peek img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
+.peek img.on{opacity:1}
+.menu-note{margin-top:28px;font-size:14px;color:var(--muted)}
+@media(max-width:760px){
+  .row{grid-template-columns:64px 1fr auto;padding:22px 0;gap:14px}
+  .row__n{display:none}
+  .row__meta{grid-column:2;grid-row:2;font-size:11px}
+  .row__price{grid-row:1/3;grid-column:3;min-width:0;align-self:center}
+  .row__thumb{display:block;grid-row:1/3;width:64px;height:64px;border-radius:50%;overflow:hidden;align-self:center}
+  .row__thumb img{width:100%;height:100%;object-fit:cover}
+  .row:hover{padding-left:0;padding-right:0;color:inherit}.row::before{display:none}
+  .peek{display:none}
+}
+
+/* statement */
+.statement{background:var(--plum);color:var(--ivory);position:relative;overflow:hidden}
+.statement .eyebrow{color:var(--blush)}
+.statement__txt{font:400 clamp(38px,5.6vw,88px)/1.08 var(--serif);letter-spacing:-.015em;margin:40px 0 0;max-width:1100px}
+.statement__txt .wd{opacity:.18;transition:opacity .3s}
+.statement__txt .wd.on{opacity:1}
+.statement__txt em{color:var(--blush)}
+.statement__pics{display:flex;gap:24px;margin-top:80px;align-items:flex-end}
+.statement__pics figure{margin:0;overflow:hidden}
+.statement__pics figure:nth-child(1){width:26%;aspect-ratio:1;border-radius:50%}
+.statement__pics figure:nth-child(2){width:34%;aspect-ratio:4/5;border-radius:24px}
+.statement__pics figure:nth-child(3){width:22%;aspect-ratio:3/4;border-radius:999px 999px 0 0;margin-left:auto}
+.statement__pics img{width:100%;height:115%;object-fit:cover}
+.ring{position:absolute;border:1px solid rgba(236,200,192,.25);border-radius:50%;pointer-events:none}
+@media(max-width:760px){.statement__pics{gap:12px}.statement__pics figure:nth-child(1){width:30%}.statement__pics figure:nth-child(2){width:40%}.statement__pics figure:nth-child(3){width:26%}}
+
+/* bridal */
+.bridal__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.bridal__img{position:relative}
+.bridal__img .arch{aspect-ratio:4/5.2}
+.bridal__price{position:absolute;right:-30px;bottom:40px;width:170px;height:170px;border-radius:50%;background:var(--rose);color:#fff;display:grid;place-content:center;text-align:center;box-shadow:0 20px 50px rgba(162,59,83,.35)}
+.bridal__price b{font:400 38px/1 var(--serif)}
+.bridal__price span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;margin-top:6px}
+.bridal h2 em{display:block;padding-left:.8em}
+.bridal__list{margin:40px 0;padding:0;list-style:none;counter-reset:b}
+.bridal__list li{counter-increment:b;display:flex;gap:22px;padding:18px 0;border-bottom:1px solid var(--line);font-size:18px}
+.bridal__list li::before{content:"0" counter(b);font:italic 400 22px/1.2 var(--serif);color:var(--rose)}
+@media(max-width:900px){.bridal__grid{grid-template-columns:1fr}.bridal__img{width:min(86%,420px);margin:0 auto}.bridal__price{right:-16px;width:130px;height:130px}.bridal__price b{font-size:30px}}
+
+.ribbon{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:center;margin-top:clamp(64px,8vw,120px)}
+.ribbon figure{margin:0;overflow:hidden}
+.ribbon img{width:100%;height:115%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.ribbon figure:hover img{transform:scale(1.05)}
+.rb1{grid-column:1/6;aspect-ratio:5/4;border-radius:999px}
+.rb2{grid-column:6/9;aspect-ratio:1;border-radius:50%}
+.rb3{grid-column:9/11;aspect-ratio:3/5;border-radius:999px 999px 0 0}
+.ribbon__txt{grid-column:11/13;font:italic 400 24px/1.25 var(--serif);color:var(--rose-d);margin:0}
+@media(max-width:760px){.ribbon{gap:12px}.rb1{grid-column:1/13}.rb2{grid-column:1/7}.rb3{grid-column:7/11}.ribbon__txt{grid-column:1/13;font-size:22px}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start}
+.gallery figure{margin:0;overflow:hidden;position:relative}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.gallery figure:hover img{transform:scale(1.06)}
+.g1{grid-column:1/6;aspect-ratio:4/5;border-radius:999px 999px 20px 20px}
+.g2{grid-column:6/10;aspect-ratio:1;border-radius:50%;margin-top:140px!important}
+.g3{grid-column:10/13;aspect-ratio:3/5;border-radius:20px;margin-top:40px!important}
+.g4{grid-column:3/8;aspect-ratio:16/10;border-radius:20px 140px 20px 20px;margin-top:-80px!important}
+.gallery__q{grid-column:8/13;align-self:center;font:italic 400 clamp(28px,2.8vw,42px)/1.15 var(--serif);color:var(--rose-d);padding-left:24px;border-left:1px solid var(--rose)}
+@media(max-width:760px){
+  .gallery{gap:14px}
+  .g1{grid-column:1/8}.g2{grid-column:8/13;margin-top:60px!important}
+  .g3{grid-column:1/6;margin-top:0!important}.g4{grid-column:6/13;margin-top:40px!important}
+  .gallery__q{grid-column:1/13;margin-top:16px}
+}
+
+/* visit */
+.visit{background:var(--cream)}
+.visit__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,96px);align-items:start}
+.visit__big{font:400 clamp(56px,9vw,150px)/.88 var(--serif);letter-spacing:-.03em;margin:28px 0 24px}
+.visit__big a{text-decoration:none;background:linear-gradient(var(--rose),var(--rose)) 0 100%/0 2px no-repeat;transition:background-size .8s var(--ease)}
+.visit__big a:hover{background-size:100% 2px}
+.visit__cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}
+.visit h3{font:500 12px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:18px}
+.hours{margin:0;display:grid;grid-template-columns:auto auto;gap:10px 28px;font-size:17px}
+.hours dt{color:var(--muted)}.hours dd{margin:0}
+.hours .today{color:var(--rose);font-weight:500}
+.open-now{display:inline-flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.1em;padding:10px 18px;border-radius:999px;background:var(--ivory)}
+.open-now i{width:8px;height:8px;border-radius:50%;background:#3f9a6a;box-shadow:0 0 0 0 rgba(63,154,106,.5);animation:ping 2s infinite}
+.open-now.closed i{background:var(--muted);animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(63,154,106,0)}100%{box-shadow:0 0 0 0 rgba(63,154,106,0)}}
+.visit__img{border-radius:24px 24px 240px 24px;overflow:hidden;aspect-ratio:4/5;margin-top:24px}
+.visit__img img{width:100%;height:115%;object-fit:cover}
+@media(max-width:900px){.visit__grid{grid-template-columns:1fr}.visit__cols{grid-template-columns:1fr}}
+
+/* booking */
+.book__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px)}
+.book__side p{color:var(--muted);max-width:380px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:40px 32px}
+.field{position:relative}
+.field--full{grid-column:1/-1}
+.field input,.field select{width:100%;border:0;border-bottom:1px solid var(--ink);background:transparent;font:400 22px/1.2 var(--serif);color:var(--ink);padding:24px 0 10px;border-radius:0;outline:none;appearance:none}
+.field label{position:absolute;left:0;top:24px;font:400 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:transform .5s var(--ease),color .3s;transform-origin:left;pointer-events:none}
+.field input:focus + label,.field input:not(:placeholder-shown) + label,.field select + label{transform:translateY(-26px) scale(.85);color:var(--rose)}
+.field::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--rose);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.field:focus-within::after{transform:none}
+.field .err{font-size:13px;color:#b3261e;margin:8px 0 0}
+.form .btn{justify-self:start}
+.form__note{grid-column:1/-1;font-size:14px;color:var(--muted);margin:0}
+@media(max-width:900px){.book__grid{grid-template-columns:1fr}}
+@media(max-width:560px){.form{grid-template-columns:1fr;gap:32px}}
+
+/* footer */
+.foot{background:var(--plum);color:var(--ivory);padding:100px 0 32px;overflow:hidden}
+.foot__top{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;font-size:15px}
+.foot h3{font:500 12px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--blush);margin-bottom:18px}
+.foot a{text-decoration:none;opacity:.85}.foot a:hover{opacity:1}
+.foot__word{font:italic 400 clamp(110px,24vw,380px)/.8 var(--serif);letter-spacing:-.04em;margin:80px 0 24px;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(236,200,192,.55);display:flex}
+.foot__word span{display:inline-block;transition:color .6s var(--ease),transform .6s var(--ease)}
+.foot__word span:hover{color:var(--blush);transform:translateY(-6%)}
+.foot__legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;opacity:.6;border-top:1px solid rgba(247,241,234,.15);padding-top:24px}
+@media(max-width:760px){.foot__top{grid-template-columns:1fr}}
+
+.credits summary{cursor:pointer}.credits ul{margin:12px 0 0;padding-left:18px;max-width:760px;line-height:1.6}
+
+/* phone bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:45;display:none;transform:translateY(140%);transition:transform .6s var(--ease)}
+.mbar.on{transform:none}
+.mbar .btn{width:100%;justify-content:center;box-shadow:0 16px 40px rgba(42,26,31,.3)}
+@media(max-width:760px){.mbar{display:block}}
+
+/* design switcher */
+.dsw{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:120;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:rgba(20,18,17,.82);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);font:500 12px/1 system-ui,sans-serif;color:#fff;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.dsw a{text-decoration:none;padding:10px 14px;border-radius:999px;white-space:nowrap;color:#fff}
+.dsw a[aria-current]{background:#fff;color:#111}
+.dsw a:not([aria-current]):hover{background:rgba(255,255,255,.12)}
+.dsw .all{opacity:.75}
+@media(max-width:560px){.dsw{bottom:12px}.dsw a{padding:9px 10px}.dsw .nm{display:none}}
+@media(max-width:760px){.mbar{bottom:72px}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv,.js .rv-img img,.js .hero h1 .ln>span,.js .hero .fade-in,.js .arch,.js .arch img,.js .hero__oval,.js .badge-wrap,.split .w>span{opacity:1!important;transform:none!important;clip-path:none!important;scale:1!important}
+  .statement__txt .wd{opacity:1}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="logo" href="#top" aria-label="Apsara Glow Studio, home"><span><i>Apsara</i> Glow</span><small>Studio</small></a>
+    <nav class="nav__links" id="menu" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#bridal">Bridal</a>
+      <a href="#studio">The studio</a>
+      <a href="#visit">Visit</a>
+      <a class="btn" href="#book"><span>Book a visit</span></a>
+    </nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="hero__deco" aria-hidden="true"></div>
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow fade-in">Beauty parlour · New Baneshwor, Kathmandu</p>
+        <h1 id="hero-h"><span class="ln"><span>Glow,</span></span><span class="ln"><span><em>unhurried.</em></span></span></h1>
+        <p class="hero__lead fade-in">Facials, nails, hair and bridal makeup in a small studio where every artist works with one client at a time, and every price is on the wall.</p>
+        <div class="hero__row fade-in">
+          <a class="btn magnetic" href="#book"><span>Book a visit</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="link" href="#services">See the menu</a>
+        </div>
+        <div class="hero__facts fade-in">
+          <div><b>Rs 1,200</b><span>Gel nails from</span></div>
+          <div><b>10 – 7</b><span>Sunday to Friday</span></div>
+          <div><b>1:1</b><span>One client, one artist</span></div>
+        </div>
+      </div>
+      <div class="hero__art">
+        <div class="arch"><img src="../img/facial-1200.jpg" srcset="../img/facial-700.jpg 700w, ../img/facial-1200.jpg 1200w" sizes="(min-width:900px) 480px, 78vw" alt="A beautician brushing a clay mask onto a client's face" data-par=".08" fetchpriority="high" width="1200" height="800" style="object-position:58% 50%"></div>
+        <div class="hero__oval badge-wrap"><img src="../img/pink-nails-700.jpg" alt="Hands painting pink gel polish" width="700" height="467"></div>
+        <div class="badge-wrap" aria-hidden="true">
+          <svg class="badge" viewBox="0 0 150 150"><defs><path id="c" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#c">Apsara Glow Studio · New Baneshwor · </textPath></text></svg>
+          <div class="badge__c"><svg viewBox="0 0 24 24"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" id="mq">
+    <span>Signature facials</span><span>Gel nails</span><span>Hair spa</span><span>Party makeup</span><span>Bridal mornings</span><span>Threading</span><span>Mani &amp; pedi</span>
+  </div></div>
+
+  <section class="sec" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow rv">Services &amp; prices</p><h2 id="services-h" class="split" style="margin-top:24px">The <em>menu</em></h2></div>
+        <p class="rv">No surprises at the counter. What you see here is what you pay, written on the studio wall before you sit down.</p>
+      </div>
+      <div class="menu-wrap">
+        <ul class="menu">
+          <li><a class="row" href="#book" data-img="0"><span class="row__thumb"><img src="../img/facial-700.jpg" alt="" loading="lazy"></span><span class="row__n">01</span><span class="row__name">Signature <em>facial</em></span><span class="row__meta">60 min</span><span class="row__price">Rs 1,500</span></a></li>
+          <li><a class="row" href="#book" data-img="1"><span class="row__thumb"><img src="../img/pink-nails-700.jpg" alt="" loading="lazy"></span><span class="row__n">02</span><span class="row__name">Gel <em>nails</em></span><span class="row__meta">45 min</span><span class="row__price">Rs 1,200</span></a></li>
+          <li><a class="row" href="#book" data-img="2"><span class="row__thumb"><img src="../img/hair-wash-700.jpg" alt="" loading="lazy"></span><span class="row__n">03</span><span class="row__name">Hair <em>spa</em></span><span class="row__meta">75 min</span><span class="row__price">Rs 2,000</span></a></li>
+          <li><a class="row" href="#book" data-img="3"><span class="row__thumb"><img src="../img/makeup-rollers-700.jpg" alt="" loading="lazy"></span><span class="row__n">04</span><span class="row__name">Party <em>makeup</em></span><span class="row__meta">90 min</span><span class="row__price">Rs 3,500</span></a></li>
+          <li><a class="row" href="#book" data-img="4"><span class="row__thumb"><img src="../img/nails-700.jpg" alt="" loading="lazy"></span><span class="row__n">05</span><span class="row__name">Mani <em>&amp; pedi</em></span><span class="row__meta">80 min</span><span class="row__price">Rs 1,800</span></a></li>
+          <li><a class="row" href="#bridal" data-img="5"><span class="row__thumb"><img src="../img/bride-veil-700.jpg" style="object-position:22% 30%" alt="" loading="lazy"></span><span class="row__n">06</span><span class="row__name">Bridal <em>package</em></span><span class="row__meta">Full morning</span><span class="row__price">Rs 12,000</span></a></li>
+        </ul>
+        <p class="menu-note">Threading and waxing on the wall menu at the studio. Walk-ins welcome when a chair is free.</p>
+        <div class="peek" id="peek" aria-hidden="true">
+          <img src="../img/facial-700.jpg" alt=""><img src="../img/pink-nails-700.jpg" alt=""><img src="../img/hair-wash-700.jpg" alt=""><img src="../img/makeup-rollers-700.jpg" alt=""><img src="../img/nails-700.jpg" alt=""><img src="../img/bride-veil-700.jpg" alt="" style="object-position:22% 30%">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec statement" aria-labelledby="st-h">
+    <span class="ring" style="width:620px;height:620px;right:-200px;top:-220px" aria-hidden="true"></span>
+    <span class="ring" style="width:380px;height:380px;right:-80px;top:-100px" aria-hidden="true"></span>
+    <div class="wrap">
+      <p class="eyebrow rv" id="st-h">The Apsara way</p>
+      <p class="statement__txt" id="st">One chair, one client, and <em>no clock</em> on the wall. Your facial takes the full hour, and nobody waits behind you.</p>
+      <div class="statement__pics">
+        <figure class="rv-img"><img src="../img/mehndi-bangles-700.jpg" alt="Hands with fresh mehndi and green bangles" loading="lazy" data-par=".06"></figure>
+        <figure class="rv-img"><img src="../img/makeup-artist-1200.jpg" alt="A makeup artist working on a client's brows" loading="lazy" data-par=".1" style="object-position:55% 40%"></figure>
+        <figure class="rv-img"><img src="../img/henna-700.jpg" alt="A hand with a fine henna pattern" loading="lazy" data-par=".05"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec bridal" id="bridal" aria-labelledby="bridal-h">
+    <div class="wrap bridal__grid">
+      <div class="bridal__img">
+        <div class="arch rv-img"><img src="../img/bride-veil-1200.jpg" alt="A bride in a white lace gown, her veil lifting in the wind" loading="lazy" data-par=".08" style="object-position:24% 30%"></div>
+        <div class="bridal__price rv"><b>Rs 12,000</b><span>The whole morning</span></div>
+      </div>
+      <div>
+        <p class="eyebrow rv">For brides</p>
+        <h2 id="bridal-h" class="split" style="margin:24px 0 0">The bridal <em>morning</em></h2>
+        <ul class="bridal__list">
+          <li class="rv">The studio is kept for you from opening time</li>
+          <li class="rv">Makeup and hair by the same artist, start to finish</li>
+          <li class="rv">Tea for your family while they wait</li>
+        </ul>
+        <a class="btn magnetic rv" href="#book"><span>Book your date</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="wrap ribbon">
+      <figure class="rb1 rv-img"><img src="../img/bride-roses-1200.jpg" alt="A smiling bride in a veil holding red roses" loading="lazy" data-par=".06" style="object-position:62% 35%"></figure>
+      <figure class="rb2 rv-img"><img src="../img/bride-smile-700.jpg" alt="A bride laughing with her makeup and hair done" loading="lazy" style="object-position:40% 30%"></figure>
+      <figure class="rb3 rv-img"><img src="../img/makeup-application-700.jpg" alt="An artist lining a client's lips" loading="lazy" style="object-position:65% 40%"></figure>
+      <p class="ribbon__txt rv">From the first coat of foundation to the last pin in your hair.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="studio" aria-labelledby="studio-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow rv">Inside</p><h2 id="studio-h" class="split" style="margin-top:24px">The <em>studio</em></h2></div>
+        <p class="rv">A calm, sunlit room five minutes from the chowk. Walk-ins are welcome.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g1 rv-img"><img src="../img/hair-wash-1200.jpg" alt="Hair wash at the basin" loading="lazy" style="object-position:50% 60%"></figure>
+        <figure class="g2 rv-img"><img src="../img/pink-nails-700.jpg" alt="Pink gel nails being painted" loading="lazy"></figure>
+        <figure class="g3 rv-img"><img src="../img/nails-700.jpg" alt="Black and tortoiseshell nail art" loading="lazy"></figure>
+        <figure class="g4 rv-img"><img src="../img/hair-styling-1200.jpg" alt="A stylist blow-drying a client's hair" loading="lazy"></figure>
+        <blockquote class="gallery__q rv">“Every appointment is unhurried. That is the whole point.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap visit__grid">
+      <div>
+        <p class="eyebrow rv" id="visit-h">Visit us</p>
+        <p class="visit__big split"><a href="https://www.openstreetmap.org/search?query=New%20Baneshwor%20Kathmandu">New <em>Baneshwor</em></a></p>
+        <span class="open-now rv" id="open"><i></i><span>Open today</span></span>
+        <div class="visit__cols">
+          <div class="rv"><h3>Hours</h3>
+            <dl class="hours" id="hours"><dt data-d="0,1,2,3,4,5">Sunday – Friday</dt><dd>10:00 – 19:00</dd><dt data-d="6">Saturday</dt><dd>10:00 – 17:00</dd></dl>
+          </div>
+          <div class="rv"><h3>Finding us</h3>
+            <p style="margin:0 0 16px">New Baneshwor, Kathmandu.<br>Five minutes' walk from the chowk.</p>
+            <a class="link" href="https://www.openstreetmap.org/search?query=New%20Baneshwor%20Kathmandu">See the area</a>
+          </div>
+        </div>
+      </div>
+      <div class="visit__img rv-img"><img src="../img/salon-interior-1200.jpg" alt="The studio's styling chairs and mirrors under tall windows" loading="lazy" data-par=".08"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="book" aria-labelledby="book-h">
+    <div class="wrap book__grid">
+      <div class="book__side">
+        <p class="eyebrow rv">Appointments</p>
+        <h2 id="book-h" class="split" style="margin:24px 0 28px">Book your <em>hour</em></h2>
+        <p class="rv">Tell us the service and the day. We write back within a day to confirm your time. For a wedding, give the date and we keep the morning.</p>
+      </div>
+      <form class="form rv" action="mailto:book@apsaraglow.example" method="post" enctype="text/plain" novalidate id="form">
+        <div class="field"><input id="f-name" name="name" type="text" autocomplete="name" placeholder=" " required><label for="f-name">Your name</label><p class="err" hidden>Write the name the booking is under.</p></div>
+        <div class="field"><input id="f-email" name="email" type="email" autocomplete="email" placeholder=" " required><label for="f-email">Email</label><p class="err" hidden>Write an email address with an @.</p></div>
+        <div class="field"><select id="f-service" name="service" required><option>Signature facial</option><option>Gel nails</option><option>Hair spa</option><option>Party makeup</option><option>Mani &amp; pedi</option><option>Bridal package</option></select><label for="f-service">Service</label></div>
+        <div class="field"><input id="f-date" name="date" type="text" autocomplete="off" placeholder=" " required><label for="f-date">Day &amp; time</label><p class="err" hidden>Write the day you'd like to come.</p></div>
+        <button class="btn magnetic" type="submit"><span>Book a visit</span><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form__note">We reply within a day.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div><h3>Studio</h3><p style="margin:0">New Baneshwor, Kathmandu<br><a href="https://www.openstreetmap.org/search?query=New%20Baneshwor%20Kathmandu">See the area</a></p></div>
+      <div><h3>Hours</h3><p style="margin:0">Sunday – Friday · 10:00 – 19:00<br>Saturday · 10:00 – 17:00</p></div>
+      <div><h3>Explore</h3><p style="margin:0"><a href="#services">Services</a> · <a href="#bridal">Bridal</a> · <a href="#studio">Studio</a> · <a href="#book">Book</a></p></div>
+    </div>
+    <p class="foot__word" aria-hidden="true"><span>A</span><span>p</span><span>s</span><span>a</span><span>r</span><span>a</span></p>
+    <div class="foot__legal"><span>© 2026 Apsara Glow Studio</span><details class="credits"><summary>Photographs via Unsplash and Wikimedia Commons</summary><ul><li><a href="https://commons.wikimedia.org/wiki/File:BethsWeddingReception-3513_(8300274206).jpg">BethsWeddingReception-3513 (8300274206)</a> by John Trainor from Roswell, GA, USA, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Bride_with_bouquet.jpg">Bride with bouquet</a> by Sherry Main from USA, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Chicago_Riverwalk_Bride_Portrait.jpg">Chicago Riverwalk Bride Portrait</a> by Marie Miller 224, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Mehndi_tatoo_for_wedding_in_India.jpg">Mehndi tatoo for wedding in India</a> by DADEVAL, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Mehndi_decoration_on_back_side_of_hands.jpg">Mehndi decoration on back side of hands</a> by Msansari4011, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Makeup_artist.jpg">Makeup artist</a> by Fidelis ogunseri ocsfilms, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> (cropped)</li><li><a href="https://commons.wikimedia.org/wiki/File:Iranian_female_makeup_Artist_Zeynab_Rashti-_canon_Photo-Mostafa_Meraji_(Iran_Mashhad)_01.jpg">Iranian female makeup Artist Zeynab Rashti- canon Photo-Mostafa Meraji (Iran Mashhad) 01</a> by Mostafameraji, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a> (cropped)</li><li>Facial, nails, hair and studio photographs from Unsplash, under the Unsplash licence.</li></ul></details></div>
+  </div>
+</footer>
+
+<nav class="dsw" aria-label="Design options"><a href="../rose/" aria-current="page"><span class="nm">1 · </span>Rose</a><a href="../noir/"><span class="nm">2 · </span>Noir</a><a href="../bloom/"><span class="nm">3 · </span>Bloom</a><a class="all" href="../">All designs</a></nav>
+<div class="mbar" id="mbar"><a class="btn" href="#book"><span>Book a visit</span></a></div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  // intro
+  const go = () => requestAnimationFrame(() => document.documentElement.classList.add('loaded'));
+  if (document.readyState === 'complete') go(); else addEventListener('load', go);
+  setTimeout(go, 1800);
+
+  // split headings into words
+  $$('.split').forEach(el => {
+    const walk = n => [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const f = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(t => {
+          if (!t.trim()) { f.append(t); return; }
+          const w = document.createElement('span'); w.className = 'w';
+          const i = document.createElement('span'); i.textContent = t; w.append(i); f.append(w);
+        });
+        c.replaceWith(f);
+      } else if (c.nodeType === 1) walk(c);
+    });
+    walk(el);
+    $$('.w > span', el).forEach((s, k) => s.style.transitionDelay = (k * 0.08) + 's');
+  });
+
+  // reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15, rootMargin: '0px 0px -8% 0px' });
+  $$('.rv, .rv-img, .split').forEach(el => reduce ? el.classList.add('in') : io.observe(el));
+
+  // nav: solid after hero, hide on scroll down
+  const nav = $('#nav'), bar = $('#mbar'); let lastY = 0;
+  const burger = $('.burger');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  $$('#menu a').forEach(a => a.addEventListener('click', () => { if (nav.classList.contains('is-open')) burger.click(); }));
+
+  // statement words
+  const st = $('#st');
+  const words = [];
+  (function wrap(n) { [...n.childNodes].forEach(c => {
+    if (c.nodeType === 3) { const f = document.createDocumentFragment(); c.textContent.split(/(\s+)/).forEach(t => { if (!t.trim()) { f.append(t); return; } const s = document.createElement('span'); s.className = 'wd'; s.textContent = t; words.push(s); f.append(s); }); c.replaceWith(f); }
+    else if (c.nodeType === 1) wrap(c);
+  }); })(st);
+
+  const mq = $('#mq'); mq.innerHTML += mq.innerHTML; let mx = 0, speed = 0.6;
+  const par = $$('[data-par]');
+
+  const tick = () => {
+    const y = scrollY, vh = innerHeight;
+    nav.classList.toggle('is-solid', y > 40);
+    if (!nav.classList.contains('is-open')) nav.classList.toggle('is-hidden', y > lastY && y > 600);
+    bar.classList.toggle('on', y > vh * .8 && $('#book').getBoundingClientRect().top > vh);
+    const dy = y - lastY; lastY = y;
+    if (!reduce) {
+      speed += (0.6 + Math.min(Math.abs(dy) * 0.12, 8) - speed) * 0.08;
+      mx -= speed * (dy < 0 ? -1 : 1) * 0.9 + 0.0;
+      const half = mq.scrollWidth / 2; if (mx < -half) mx += half; if (mx > 0) mx -= half;
+      mq.style.transform = `translate3d(${mx}px,0,0)`;
+      par.forEach(img => { const r = img.parentElement.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return; const p = (r.top + r.height / 2 - vh / 2) / vh; img.style.transform = `translate3d(0,${p * img.dataset.par * -100}%,0)`; });
+      const r = st.getBoundingClientRect(), prog = Math.min(1, Math.max(0, (vh * .85 - r.top) / (r.height + vh * .35)));
+      const n = Math.round(prog * words.length); words.forEach((w, i) => w.classList.toggle('on', i < n));
+    }
+    requestAnimationFrame(tick);
+  };
+  if (reduce) words.forEach(w => w.classList.add('on'));
+  requestAnimationFrame(tick);
+
+  // services hover peek
+  const peek = $('#peek'), pimgs = $$('img', peek); let px = 0, py = 0, tx = 0, ty = 0;
+  if (matchMedia('(hover:hover) and (min-width:761px)').matches && !reduce) {
+    $$('.row').forEach(r => {
+      r.addEventListener('mouseenter', () => { peek.classList.add('on'); pimgs.forEach((im, i) => im.classList.toggle('on', i == r.dataset.img)); });
+      r.addEventListener('mouseleave', () => peek.classList.remove('on'));
+    });
+    addEventListener('mousemove', e => { tx = e.clientX + 170; ty = e.clientY; });
+    (function follow() { px += (tx - px) * .12; py += (ty - py) * .12; peek.style.left = px + 'px'; peek.style.top = py + 'px'; requestAnimationFrame(follow); })();
+  }
+
+  // magnetic buttons
+  if (matchMedia('(hover:hover)').matches && !reduce) $$('.magnetic').forEach(b => {
+    b.addEventListener('mousemove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px,${(e.clientY - r.top - r.height / 2) * .35}px)`; });
+    b.addEventListener('mouseleave', () => b.style.transform = '');
+  });
+
+  // open now (Kathmandu time)
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kathmandu', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+  const get = t => parts.find(p => p.type === t).value, day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday')), mins = +get('hour') * 60 + +get('minute');
+  const close = day === 6 ? 17 * 60 : 19 * 60, isOpen = mins >= 600 && mins < close;
+  const open = $('#open'); open.querySelector('span').textContent = isOpen ? `Open now · until ${close / 60}:00` : 'Closed now · opens at 10:00';
+  open.classList.toggle('closed', !isOpen);
+  $$('#hours dt').forEach(dt => { if (dt.dataset.d.split(',').includes(String(day))) { dt.classList.add('today'); dt.nextElementSibling.classList.add('today'); } });
+
+  // form: check fields, then hand to the mail app
+  $('#form').addEventListener('submit', e => {
+    let bad = null;
+    $$('#form input[required]').forEach(i => { const ok = i.type === 'email' ? /.+@.+\..+/.test(i.value) : i.value.trim(); const er = i.parentElement.querySelector('.err'); er.hidden = !!ok; i.setAttribute('aria-invalid', !ok); if (!ok && !bad) bad = i; });
+    if (bad) { e.preventDefault(); bad.focus(); }
+  });
+})();
+</script>
+</body>
+</html>

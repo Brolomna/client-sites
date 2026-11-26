@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apsara Glow Studio · Beauty parlour in New Baneshwor, Kathmandu</title>
+<meta name="description" content="Facials, nails, hair and bridal makeup in New Baneshwor, Kathmandu. One client at a time, every price on the wall.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Apsara Glow Studio · Design 3, Bloom">
+<meta property="og:image" content="../share-bloom.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fff4ec">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff4ec;--ink:#1f1a1c;--red:#e8483a;--pink:#ffc6d6;--hot:#ff5c8a;--butter:#ffe27a;--mint:#bfe8d2;--lilac:#d9d2ff;--muted:#6d6265;
+  --d:"Bricolage Grotesque",system-ui,sans-serif;--t:"DM Sans",system-ui,sans-serif;--bounce:cubic-bezier(.34,1.56,.64,1);--ease:cubic-bezier(.22,1,.36,1);--gut:clamp(16px,4vw,56px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--t);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(100% - 2*var(--gut),1320px);margin-inline:auto}
+h1,h2,h3{font-family:var(--d);font-weight:800;letter-spacing:-.035em;line-height:.92;margin:0}
+h2{font-size:clamp(48px,7vw,104px)}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:99;background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px}
+:focus-visible{outline:3px solid var(--hot);outline-offset:3px}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--ink);color:var(--cream);font:500 13px/1 var(--t)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:18px 28px;border-radius:999px;background:var(--red);color:#fff;text-decoration:none;font:600 17px/1 var(--d);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .25s var(--bounce),box-shadow .25s var(--bounce);cursor:pointer}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn--white{background:#fff;color:var(--ink)}
+.btn .ar{transition:transform .3s var(--bounce)}.btn:hover .ar{transform:translateX(4px)}
+
+/* nav */
+.nav{position:sticky;top:12px;z-index:50;padding:0 var(--gut)}
+.nav__in{max-width:1320px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border:2px solid var(--ink);border-radius:999px;padding:8px 8px 8px 22px}
+.logo{font:800 24px/1 var(--d);letter-spacing:-.04em;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo b{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--hot);color:#fff;font-size:16px;transition:transform .5s var(--bounce)}
+.logo:hover b{transform:rotate(-20deg) scale(1.1)}
+.nav__links{display:flex;gap:6px}
+.nav__links a{text-decoration:none;font:500 15px/1 var(--t);padding:12px 16px;border-radius:999px;transition:background .25s}
+.nav__links a:hover{background:var(--pink)}
+.nav .btn{padding:13px 20px;font-size:15px;box-shadow:none;border-width:2px}
+.nav .btn:hover{box-shadow:3px 3px 0 var(--ink)}
+@media(max-width:860px){.nav__links{display:none}}
+
+/* hero */
+.hero{padding:clamp(48px,7vw,100px) 0 40px;position:relative}
+.hero h1{font-size:clamp(60px,11vw,176px);line-height:.88}
+.hero h1 .pill{display:inline-block;width:1.7em;height:.78em;border-radius:999px;overflow:hidden;vertical-align:.02em;border:3px solid var(--ink);rotate:-4deg}
+.hero h1 .pill img{width:100%;height:100%;object-fit:cover}
+.hero h1 .pill--2{width:1.2em;rotate:6deg;background:var(--butter)}
+.hero h1 .hl{position:relative;display:inline-block;z-index:0}
+.hero h1 .hl::after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.06em;height:.32em;background:var(--hot);z-index:-1;border-radius:6px;transform:scaleX(0);transform-origin:left;transition:transform 1s .9s var(--ease)}
+.go .hero h1 .hl::after{transform:none}
+.hero__row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:28px;margin-top:40px}
+.hero__row p{max-width:460px;font-size:20px;margin:0}
+.hero__chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chip{padding:10px 16px;border-radius:999px;border:2px solid var(--ink);font:500 14px/1 var(--t);background:#fff}
+.sticker{position:absolute;display:grid;place-items:center;text-align:center;border-radius:50%;border:2px solid var(--ink);font:800 15px/1.05 var(--d);letter-spacing:-.02em;z-index:3}
+.sticker--a{width:130px;height:130px;background:var(--butter);right:5%;top:170px;transform:rotate(12deg);animation:wob 6s ease-in-out infinite}
+.sticker--b{width:96px;height:96px;background:var(--mint);right:19%;top:250px;transform:rotate(-10deg);animation:wob 7s ease-in-out infinite reverse}
+@keyframes wob{50%{transform:rotate(-6deg) translateY(-8px)}}
+.star{position:absolute;width:64px;height:64px;left:44%;top:10px;animation:spin 10s linear infinite}
+.star path{fill:var(--red)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:760px){.sticker--a{display:none}.sticker--b{display:none}.star{display:none}}
+
+/* hero cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px;align-items:end}
+.pc{margin:0;background:#fff;border:2px solid var(--ink);border-radius:28px;padding:10px;transition:transform .5s var(--bounce)}
+.pc img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px}
+.pc figcaption{font:600 16px/1 var(--d);padding:12px 6px 4px;display:flex;justify-content:space-between}
+.pc:nth-child(1){transform:rotate(-5deg)}.pc:nth-child(2){transform:rotate(3deg) translateY(-30px)}.pc:nth-child(3){transform:rotate(-2deg)}.pc:nth-child(4){transform:rotate(5deg) translateY(-20px)}
+.pc:hover{transform:rotate(0) translateY(-14px) scale(1.03)}
+@media(max-width:760px){.cards{grid-template-columns:1fr 1fr;gap:14px}.pc:nth-child(n+3){display:none}}
+
+/* marquee */
+.mq{background:var(--ink);color:var(--cream);transform:rotate(-2deg);margin:80px -20px 0;padding:22px 0;overflow:hidden;border-block:2px solid var(--ink)}
+.mq__t{display:flex;width:max-content;animation:mq 26s linear infinite}
+.mq__t span{font:800 clamp(30px,4vw,54px)/1 var(--d);letter-spacing:-.03em;padding:0 28px;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.mq__t span::after{content:"";width:28px;height:28px;background:var(--hot);border-radius:50%;flex:none}
+.mq__t span:nth-child(3n+2)::after{background:var(--butter)}
+.mq__t span:nth-child(3n)::after{background:var(--mint)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* bento */
+.sec{padding:clamp(90px,11vw,160px) 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.head p{max-width:380px;margin:0;color:var(--muted)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(150px,auto);gap:18px}
+.tile{position:relative;border:2px solid var(--ink);border-radius:32px;padding:26px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:transform .4s var(--bounce),box-shadow .4s var(--bounce)}
+.tile:hover{transform:translate(-4px,-4px) rotate(-.6deg);box-shadow:8px 8px 0 var(--ink)}
+.tile h3{font-size:clamp(30px,3vw,46px)}
+.tile .pr{font:800 clamp(36px,3.6vw,56px)/1 var(--d);letter-spacing:-.04em}
+.tile .mn{font:500 14px/1 var(--t);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.7);border:1.5px solid var(--ink);align-self:flex-start}
+.tile .row{display:flex;justify-content:space-between;align-items:end;gap:12px}
+.t1{grid-column:span 5;grid-row:span 2;background:var(--pink)}
+.t2{grid-column:span 4;background:var(--butter)}
+.t3{grid-column:span 3;grid-row:span 2;padding:0}
+.t4{grid-column:span 4;background:var(--mint)}
+.t5{grid-column:span 4;background:var(--lilac)}
+.t6{grid-column:span 4;background:#fff}
+.t7{grid-column:span 4;background:var(--red);color:#fff}
+.t3 img,.t1 .ph{width:100%;height:100%;object-fit:cover}
+.t1 .ph{position:absolute;right:-30px;bottom:-30px;width:62%;height:auto;aspect-ratio:1;border-radius:50%;border:2px solid var(--ink);transition:transform .6s var(--bounce)}
+.t1:hover .ph{transform:rotate(-8deg) scale(1.05)}
+.t1 .row{position:relative;z-index:1;flex-direction:column;align-items:flex-start;max-width:55%}
+.tile .ic{position:absolute;right:20px;top:20px;width:56px;height:56px;border-radius:50%;overflow:hidden;border:2px solid var(--ink);transition:transform .5s var(--bounce)}
+.tile .ic img{width:100%;height:100%;object-fit:cover}
+.tile:hover .ic{transform:scale(1.25) rotate(10deg)}
+@media(max-width:900px){.bento{grid-template-columns:repeat(2,1fr)}.t1,.t2,.t3,.t4,.t5,.t6,.t7{grid-column:span 1;grid-row:auto}.t1{grid-column:span 2;min-height:300px}.t3{min-height:260px}.t7{grid-column:span 2}}
+@media(max-width:520px){.bento{grid-template-columns:1fr}.t1,.t7{grid-column:auto}}
+
+/* polaroids */
+.studio{background:var(--pink);border-block:2px solid var(--ink)}
+.pols{position:relative;height:620px;margin-top:40px}
+.pol{position:absolute;margin:0;background:#fff;padding:12px 12px 46px;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);width:clamp(180px,22vw,290px);cursor:grab;transition:transform .5s var(--bounce),box-shadow .3s;touch-action:none;user-select:none}
+.pol img{width:100%;aspect-ratio:1;object-fit:cover;pointer-events:none}
+.pol figcaption{position:absolute;left:14px;bottom:12px;font:600 18px/1 var(--d)}
+.pol:hover{box-shadow:10px 10px 0 var(--ink);z-index:9}
+.pol.drag{cursor:grabbing;transition:none;z-index:10}
+.hint{font:500 14px/1 var(--t);display:inline-flex;align-items:center;gap:8px;margin-top:16px}
+@media(max-width:760px){.pols{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}.pol{position:relative;width:auto;left:auto!important;top:auto!important}.hint{display:none}}
+
+/* bridal */
+.bridal__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.blob{position:relative;aspect-ratio:1;max-width:560px}
+.blob__img{position:absolute;inset:0;overflow:hidden;border:3px solid var(--ink);animation:morph 12s ease-in-out infinite;border-radius:58% 42% 51% 49%/45% 55% 45% 55%}
+.blob__img img{width:100%;height:100%;object-fit:cover;object-position:24% 30%}
+@keyframes morph{50%{border-radius:42% 58% 45% 55%/58% 42% 58% 42%}}
+.blob__bg{position:absolute;inset:6% -6% -6% 6%;background:var(--butter);border:2px solid var(--ink);z-index:-1;animation:morph 12s ease-in-out infinite reverse;border-radius:45% 55% 60% 40%/50% 45% 55% 50%}
+.blob .sticker{right:-10px;bottom:30px;width:150px;height:150px;background:var(--hot);color:#fff;font-size:30px;animation:wob 6s ease-in-out infinite}
+.blob .sticker small{display:block;font:500 12px/1.2 var(--t)}
+.checks{list-style:none;padding:0;margin:32px 0 40px;display:grid;gap:12px}
+.checks li{display:flex;gap:14px;align-items:center;font-size:19px;background:#fff;border:2px solid var(--ink);border-radius:18px;padding:14px 18px;transition:transform .3s var(--bounce)}
+.checks li:hover{transform:translateX(8px)}
+.checks li::before{content:"";flex:none;width:26px;height:26px;border-radius:50%;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231f1a1c' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat;border:2px solid var(--ink)}
+@media(max-width:860px){.bridal__grid{grid-template-columns:1fr}.blob{width:88%;margin:0 auto}.blob .sticker{width:110px;height:110px;font-size:22px}}
+
+/* visit + book */
+.vb{display:grid;grid-template-columns:1fr 1.15fr;gap:20px}
+.box{border:2px solid var(--ink);border-radius:36px;padding:clamp(28px,4vw,52px)}
+.box--visit{background:var(--butter);display:flex;flex-direction:column;gap:22px}
+.box--book{background:#fff}
+.where{font:800 clamp(44px,5vw,76px)/.9 var(--d);letter-spacing:-.04em}
+.where a{text-decoration:none}
+.where a:hover{color:var(--red)}
+.now{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:10px 16px;border-radius:999px;background:var(--ink);color:#fff;font:500 14px/1 var(--t)}
+.now i{width:10px;height:10px;border-radius:50%;background:#56d68f;animation:bl 1.6s infinite}
+.now.off i{background:#aaa;animation:none}
+@keyframes bl{50%{opacity:.3}}
+.hrs{display:grid;gap:10px}
+.hrs div{display:flex;justify-content:space-between;gap:12px;background:rgba(255,255,255,.65);border:2px solid var(--ink);border-radius:16px;padding:14px 18px;font-weight:500}
+.hrs div.today{background:var(--ink);color:#fff}
+.vimg{border-radius:24px;overflow:hidden;border:2px solid var(--ink);aspect-ratio:16/10;margin-top:auto}
+.vimg img{width:100%;height:100%;object-fit:cover}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.f{display:grid;gap:8px}
+.f--full{grid-column:1/-1}
+.f label{font:600 15px/1 var(--d)}
+.f input,.f select{font:400 17px/1.2 var(--t);padding:16px 18px;border:2px solid var(--ink);border-radius:16px;background:var(--cream);color:var(--ink);outline:none;transition:box-shadow .25s var(--bounce),transform .25s var(--bounce);width:100%}
+.f input:focus,.f select:focus{box-shadow:4px 4px 0 var(--hot);transform:translate(-2px,-2px)}
+.err{font-size:14px;color:#b3261e;margin:0}
+.pick{display:flex;flex-wrap:wrap;gap:8px}
+.pick label{font:500 14px/1 var(--t);position:relative}
+.pick input{position:absolute;opacity:0;left:0;top:0;width:1px;height:1px}
+.pick span{display:inline-block;padding:11px 14px;border:2px solid var(--ink);border-radius:999px;cursor:pointer;background:var(--cream);transition:background .2s,transform .25s var(--bounce)}
+.pick input:checked+span{background:var(--hot);color:#fff;transform:rotate(-3deg)}
+.pick input:focus-visible+span{outline:3px solid var(--hot);outline-offset:2px}
+@media(max-width:860px){.vb{grid-template-columns:1fr}}
+@media(max-width:520px){.form{grid-template-columns:1fr}}
+
+/* footer */
+.foot{padding:80px 0 120px;text-align:center;overflow:hidden}
+.foot__word{font:800 clamp(100px,25vw,380px)/.8 var(--d);letter-spacing:-.06em;margin:0;display:flex;justify-content:center}
+.foot__word span{display:inline-block;transition:transform .4s var(--bounce),color .3s}
+.foot__word span:hover{transform:translateY(-14%) rotate(-8deg);color:var(--hot)}
+.foot__row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 28px;margin-top:32px;font-size:14px;color:var(--muted)}
+
+/* reveal */
+.js .pop{opacity:0;transform:translateY(40px) scale(.96)}
+.js .pop.in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .9s var(--bounce)}
+.js .hero h1 .w{display:inline-block;opacity:0;transform:translateY(60px) rotate(4deg)}
+.go .hero h1 .w{opacity:1;transform:none;transition:opacity .6s,transform 1s var(--bounce)}
+.js .pc{opacity:0}
+.go .pc{opacity:1;transition:opacity .8s 1s,transform .5s var(--bounce)}
+
+/* design switcher */
+.dsw{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:120;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:rgba(20,18,17,.82);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);font:500 12px/1 system-ui,sans-serif;color:#fff;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.dsw a{text-decoration:none;padding:10px 14px;border-radius:999px;white-space:nowrap;color:#fff}
+.dsw a[aria-current]{background:#fff;color:#111}
+.dsw a:not([aria-current]):hover{background:rgba(255,255,255,.12)}
+.dsw .all{opacity:.75}
+@media(max-width:560px){.dsw{bottom:12px}.dsw a{padding:9px 10px}.dsw .nm{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .pop,.js .hero h1 .w,.js .pc{opacity:1!important;transform:none!important}
+  .hero h1 .hl::after{transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="nav__in">
+    <a class="logo" href="#top"><b>a</b>apsara</a>
+    <nav class="nav__links" aria-label="Main"><a href="#services">Services</a><a href="#studio">Studio</a><a href="#bridal">Bridal</a><a href="#visit">Visit</a></nav>
+    <a class="btn" href="#book">Book a visit</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="wrap" style="position:relative">
+      <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></svg>
+      <span class="sticker sticker--a" aria-hidden="true">Walk-ins<br>welcome!</span>
+      <span class="sticker sticker--b" aria-hidden="true">New<br>Baneshwor</span>
+      <span class="tag">Beauty parlour · New Baneshwor, Kathmandu</span>
+      <h1 id="hero-h" style="margin-top:28px"><span class="w">Get</span> <span class="w">your</span> <span class="w pill"><img src="../img/pink-nails-700.jpg" alt=""></span> <span class="w hl">glow</span><br><span class="w">on,</span> <span class="w pill pill--2"><img src="../img/makeup-rollers-700.jpg" alt=""></span> <span class="w">slowly.</span></h1>
+      <div class="hero__row">
+        <div>
+          <p>Facials, nails, hair and bridal makeup, one client at a time. Every price is on the wall before you sit down.</p>
+          <div class="hero__chips"><span class="chip">Sun–Fri 10–19</span><span class="chip">Sat 10–17</span><span class="chip">From Rs 1,200</span></div>
+        </div>
+        <a class="btn" href="#book">Book a visit <span class="ar">→</span></a>
+      </div>
+      <div class="cards">
+        <figure class="pc"><img src="../img/facial-700.jpg" alt="A clay mask facial"><figcaption>Facials <span>✦</span></figcaption></figure>
+        <figure class="pc"><img src="../img/nails-700.jpg" alt="Black and tortoiseshell nail art"><figcaption>Nails <span>✦</span></figcaption></figure>
+        <figure class="pc"><img src="../img/hair-styling-700.jpg" alt="A blow-dry at the mirror" style="object-position:62% 50%"><figcaption>Hair <span>✦</span></figcaption></figure>
+        <figure class="pc"><img src="../img/bride-smile-700.jpg" alt="A laughing bride" style="object-position:40% 30%"><figcaption>Bridal <span>✦</span></figcaption></figure>
+      </div>
+    </div>
+    <div class="mq" aria-hidden="true"><div class="mq__t"><span>Signature facials</span><span>Gel nails</span><span>Hair spa</span><span>Party makeup</span><span>Bridal mornings</span><span>Mani &amp; pedi</span><span>Signature facials</span><span>Gel nails</span><span>Hair spa</span><span>Party makeup</span><span>Bridal mornings</span><span>Mani &amp; pedi</span></div></div>
+  </section>
+
+  <section class="sec" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head"><h2 id="svc-h" class="pop">The menu</h2><p class="pop">No surprises at the counter. What you see here is exactly what you pay.</p></div>
+      <div class="bento">
+        <a class="tile t1 pop" href="#book"><div class="row"><span class="mn">60 min</span><h3>Signature facial</h3><span class="pr">Rs 1,500</span></div><img class="ph" src="../img/facial-700.jpg" alt="" loading="lazy"></a>
+        <a class="tile t2 pop" href="#book"><span class="ic"><img src="../img/pink-nails-700.jpg" alt="" loading="lazy"></span><span class="mn">45 min</span><div class="row"><h3>Gel nails</h3><span class="pr">Rs 1,200</span></div></a>
+        <figure class="tile t3 pop" style="margin:0"><img src="../img/makeup-artist-700.jpg" alt="A makeup artist at work" loading="lazy" style="object-position:55% 40%"></figure>
+        <a class="tile t4 pop" href="#book"><span class="ic"><img src="../img/hair-wash-700.jpg" alt="" loading="lazy"></span><span class="mn">75 min</span><div class="row"><h3>Hair spa</h3><span class="pr">Rs 2,000</span></div></a>
+        <a class="tile t5 pop" href="#book"><span class="ic"><img src="../img/makeup-rollers-700.jpg" alt="" loading="lazy"></span><span class="mn">90 min</span><div class="row"><h3>Party makeup</h3><span class="pr">Rs 3,500</span></div></a>
+        <a class="tile t6 pop" href="#book"><span class="ic"><img src="../img/nails-700.jpg" alt="" loading="lazy"></span><span class="mn">80 min</span><div class="row"><h3>Mani &amp; pedi</h3><span class="pr">Rs 1,800</span></div></a>
+        <a class="tile t7 pop" href="#bridal"><span class="ic"><img src="../img/bride-veil-700.jpg" alt="" loading="lazy" style="object-position:22% 30%"></span><span class="mn" style="color:var(--ink)">Whole morning</span><div class="row"><h3>Bridal package</h3><span class="pr">Rs 12,000</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec studio" id="studio" aria-labelledby="st-h">
+    <div class="wrap">
+      <div class="head"><h2 id="st-h" class="pop">Inside the studio</h2><p class="pop">One chair, one client, and no clock on the wall. Your facial takes the full hour.</p></div>
+      <span class="hint" aria-hidden="true">✋ Drag the photos around</span>
+      <div class="pols" id="pols">
+        <figure class="pol" style="left:2%;top:40px;--r:-7deg"><img src="../img/hair-wash-700.jpg" alt="A hair wash at the basin" style="object-position:50% 60%"><figcaption>wash day</figcaption></figure>
+        <figure class="pol" style="left:22%;top:150px;--r:5deg"><img src="../img/salon-interior-700.jpg" alt="The studio's styling chairs"><figcaption>the room</figcaption></figure>
+        <figure class="pol" style="left:42%;top:20px;--r:-3deg"><img src="../img/makeup-application-700.jpg" alt="Lip liner being applied" style="object-position:65% 40%"><figcaption>lips</figcaption></figure>
+        <figure class="pol" style="left:60%;top:190px;--r:8deg"><img src="../img/henna-700.jpg" alt="A fine henna pattern"><figcaption>details</figcaption></figure>
+        <figure class="pol" style="left:78%;top:50px;--r:-5deg"><img src="../img/mehndi-bangles-700.jpg" alt="Mehndi and green bangles"><figcaption>bangles</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="bridal" aria-labelledby="br-h">
+    <div class="wrap bridal__grid">
+      <div class="blob pop"><span class="blob__bg"></span><div class="blob__img"><img src="../img/bride-veil-1200.jpg" alt="A bride in a white lace gown, her veil lifting in the wind" loading="lazy"></div><span class="sticker">Rs 12k<small>whole morning</small></span></div>
+      <div>
+        <span class="tag pop">For brides</span>
+        <h2 id="br-h" class="pop" style="margin-top:22px">Your bridal morning</h2>
+        <ul class="checks"><li class="pop">The studio kept for you from opening</li><li class="pop">Makeup and hair by one artist</li><li class="pop">Tea for your family while they wait</li></ul>
+        <a class="btn pop" href="#book">Book your date <span class="ar">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0" aria-label="Visit and book">
+    <div class="wrap vb">
+      <div class="box box--visit pop" id="visit">
+        <span class="tag">Come say hi</span>
+        <p class="where" style="margin:0"><a href="https://www.openstreetmap.org/search?query=New%20Baneshwor%20Kathmandu">New Baneshwor, Kathmandu ↗</a></p>
+        <span class="now" id="now"><i></i><span>Open today</span></span>
+        <div class="hrs" id="hrs"><div data-d="0,1,2,3,4,5"><span>Sunday – Friday</span><span>10:00 – 19:00</span></div><div data-d="6"><span>Saturday</span><span>10:00 – 17:00</span></div></div>
+        <p style="margin:0">Five minutes' walk from the chowk. Walk-ins welcome when a chair is free.</p>
+        <div class="vimg"><img src="../img/salon-interior-700.jpg" alt="The studio room" loading="lazy"></div>
+      </div>
+      <div class="box box--book pop" id="book">
+        <h2 style="font-size:clamp(44px,5vw,76px)">Book your hour</h2>
+        <form class="form" id="form" action="mailto:book@apsaraglow.example" method="post" enctype="text/plain" novalidate>
+          <div class="f"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required><p class="err" hidden>Write the name the booking is under.</p></div>
+          <div class="f"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><p class="err" hidden>Write an email address with an @.</p></div>
+          <fieldset class="f f--full" style="border:0;padding:0;margin:0"><legend style="font:600 15px/1 var(--d);margin-bottom:10px">What would you like?</legend>
+            <div class="pick">
+              <label><input type="radio" name="service" value="Signature facial" checked><span>Facial</span></label>
+              <label><input type="radio" name="service" value="Gel nails"><span>Gel nails</span></label>
+              <label><input type="radio" name="service" value="Hair spa"><span>Hair spa</span></label>
+              <label><input type="radio" name="service" value="Party makeup"><span>Party makeup</span></label>
+              <label><input type="radio" name="service" value="Mani and pedi"><span>Mani &amp; pedi</span></label>
+              <label><input type="radio" name="service" value="Bridal package"><span>Bridal</span></label>
+            </div>
+          </fieldset>
+          <div class="f f--full"><label for="f-date">Day &amp; time</label><input id="f-date" name="date" type="text" autocomplete="off" required><p class="err" hidden>Write the day you'd like to come.</p></div>
+          <div class="f--full" style="display:flex;flex-wrap:wrap;align-items:center;gap:18px"><button class="btn" type="submit">Book a visit <span class="ar">→</span></button><span style="font-size:14px;color:var(--muted)">We reply within a day.</span></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot__word" aria-hidden="true"><span>a</span><span>p</span><span>s</span><span>a</span><span>r</span><span>a</span><span style="color:var(--hot)">!</span></p>
+  <div class="foot__row"><span>© 2026 Apsara Glow Studio</span><span>New Baneshwor, Kathmandu</span><a href="../credits.html">Photographs via Unsplash and Wikimedia Commons</a></div>
+</footer>
+
+<nav class="dsw" aria-label="Design options"><a href="../rose/"><span class="nm">1 · </span>Rose</a><a href="../noir/"><span class="nm">2 · </span>Noir</a><a href="../bloom/" aria-current="page"><span class="nm">3 · </span>Bloom</a><a class="all" href="../">All designs</a></nav>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  $$('.hero h1 .w').forEach((w, i) => w.style.transitionDelay = (i * .08) + 's');
+  const go = () => requestAnimationFrame(() => document.documentElement.classList.add('go'));
+  if (document.readyState === 'complete') go(); else addEventListener('load', go); setTimeout(go, 1500);
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const sib = [...e.target.parentElement.children].filter(c => c.classList.contains('pop')); e.target.style.transitionDelay = (Math.max(0, sib.indexOf(e.target)) * .07) + 's'; e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  $$('.pop').forEach(el => reduce ? el.classList.add('in') : io.observe(el));
+
+  // polaroids: tilt and drag (desktop)
+  const pols = $$('.pol');
+  pols.forEach(p => p.style.transform = `rotate(${p.style.getPropertyValue('--r')})`);
+  if (matchMedia('(min-width:761px)').matches) {
+    let z = 10;
+    pols.forEach(p => {
+      let sx, sy, ox, oy, on = false;
+      p.addEventListener('pointerdown', e => { on = true; p.setPointerCapture(e.pointerId); p.classList.add('drag'); p.style.zIndex = ++z; sx = e.clientX; sy = e.clientY; ox = p.offsetLeft; oy = p.offsetTop; p.style.transform = 'rotate(0) scale(1.05)'; });
+      p.addEventListener('pointermove', e => { if (!on) return; p.style.left = (ox + e.clientX - sx) + 'px'; p.style.top = (oy + e.clientY - sy) + 'px'; });
+      const up = () => { if (!on) return; on = false; p.classList.remove('drag'); p.style.transform = `rotate(${(Math.random() * 14 - 7).toFixed(1)}deg)`; };
+      p.addEventListener('pointerup', up); p.addEventListener('pointercancel', up);
+    });
+  }
+
+  // open now
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kathmandu', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+  const g = t => parts.find(p => p.type === t).value, day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')), m = +g('hour') * 60 + +g('minute');
+  const close = day === 6 ? 1020 : 1140, open = m >= 600 && m < close, now = $('#now');
+  now.querySelector('span').textContent = open ? `Open now, until ${close / 60}:00` : 'Closed now, opens at 10:00'; now.classList.toggle('off', !open);
+  $$('#hrs div').forEach(d => d.classList.toggle('today', d.dataset.d.split(',').includes(String(day))));
+
+  $('#form').addEventListener('submit', e => {
+    let bad = null;
+    $$('#form input[required]').forEach(i => { const ok = i.type === 'email' ? /.+@.+\..+/.test(i.value) : i.value.trim(); const er = i.parentElement.querySelector('.err'); er.hidden = !!ok; i.setAttribute('aria-invalid', !ok); if (!ok && !bad) bad = i; });
+    if (bad) { e.preventDefault(); bad.focus(); }
+  });
+})();
+</script>
+</body>
+</html>
